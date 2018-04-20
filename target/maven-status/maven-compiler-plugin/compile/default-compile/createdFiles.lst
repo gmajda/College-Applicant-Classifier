@@ -1,0 +1,6 @@
+org\college\controller\CollegeController.class
+org\college\model\Applicant.class
+org\college\enums\Message.class
+org\college\model\Evaluation.class
+org\college\App.class
+org\college\service\CollegeService.class

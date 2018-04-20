@@ -2,9 +2,14 @@ package org.college.controller;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.college.model.Applicant;
 import org.college.service.CollegeService;
+import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Categories.IncludeCategory;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.skyscreamer.jsonassert.JSONAssert;
@@ -31,6 +36,25 @@ public class CollegeControllerTest {
 	private CollegeService collegeService;
 	
 	String applicantJson = "{\"firstName\":\"Richard\",\"lastName\":\"Mathiew\",\"age\":19}";
+	
+	List<Applicant> applicants;
+	 	
+	@Before
+	public void init(){
+		applicants = new ArrayList<Applicant>();
+		Applicant firstApplicant = new Applicant();
+		firstApplicant.setFirstName("Richard");
+		firstApplicant.setLastName("Mathiew");
+		firstApplicant.setAge(19);
+		
+		Applicant secondApplicant = new Applicant();
+		secondApplicant.setFirstName("Robert");
+		secondApplicant.setLastName("Franck");
+		secondApplicant.setAge(23);
+		
+		applicants.add(firstApplicant);
+		applicants.add(secondApplicant);
+	}
 
 	@Test
 	public void registerApplicants() throws Exception{
@@ -49,5 +73,22 @@ public class CollegeControllerTest {
 
 		assertEquals("http://localhost/college/add/applicant/1", response
 				.getHeader(HttpHeaders.LOCATION));
+		
+		
+	}
+	
+	@Test
+	public void retrieveAllApplicants() throws Exception{
+		Mockito.when(collegeService.retrieveAllApplicant()).thenReturn(applicants);
+		
+		RequestBuilder requestBuilder = MockMvcRequestBuilders.get(
+				"/college/all/applicants").accept(
+				MediaType.APPLICATION_JSON);
+		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
+		System.out.println(result.getResponse());
+		String expected = "[{\"id\":null,\"firstName\":\"Richard\",\"lastName\":\"Mathiew\",\"age\":19,\"gpa\":0.0,\"scale\":0.0,\"sat\":0.0,\"act\":0.0,\"felonies\":false},{\"id\":null,\"firstName\":\"Robert\",\"lastName\":\"Franck\",\"age\":23,\"gpa\":0.0,\"scale\":0.0,\"sat\":0.0,\"act\":0.0,\"felonies\":false}]";
+		
+		JSONAssert.assertEquals(expected, result.getResponse()
+				.getContentAsString(), false);
 	}
 }

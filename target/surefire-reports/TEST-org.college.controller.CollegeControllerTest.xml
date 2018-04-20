@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.college.controller.CollegeControllerTest" time="0.454" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
+    <property name="java.vm.version" value="25.131-b11"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\DELL\workspace\classification-web-services"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\DELL\workspace\classification-web-services"/>
+    <property name="java.runtime.version" value="1.8.0_131-b11"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\DELL\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Program Files (x86)\Apache\maven\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Apache\maven\bin;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\DELL\AppData\Local\Microsoft\WindowsApps;C:\Users\DELL\AppData\Roaming\npm;."/>
+    <property name="maven.conf" value="C:\Program Files (x86)\Apache\maven\bin\../conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Program Files (x86)\Apache\maven\bin\..\lib\jansi-native\windows64"/>
+    <property name="user.home" value="C:\Users\DELL"/>
+    <property name="user.timezone" value="America/Los_Angeles"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="DELL"/>
+    <property name="java.class.path" value="C:\Program Files (x86)\Apache\maven\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_131\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="fr"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_131"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_131\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp850"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files (x86)\Apache\maven\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp850"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="registerApplicants" classname="org.college.controller.CollegeControllerTest" time="0.454">
+    <failure message="expected:&lt;...llege/add/applicant/[1]&gt; but was:&lt;...llege/add/applicant/[id]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<...llege/add/applicant/[1]> but was:<...llege/add/applicant/[id]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at org.college.controller.CollegeControllerTest.registerApplicants(CollegeControllerTest.java:50)
+]]></failure>
+    <system-out><![CDATA[04:29:11.692 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class org.college.controller.CollegeControllerTest]
+04:29:11.734 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+04:29:11.756 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+04:29:11.796 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [org.college.controller.CollegeControllerTest] from class [org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper]
+04:29:11.885 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.college.controller.CollegeControllerTest], using SpringBootContextLoader
+04:29:11.911 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.college.controller.CollegeControllerTest]: class path resource [org/college/controller/CollegeControllerTest-context.xml] does not exist
+04:29:11.911 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.college.controller.CollegeControllerTest]: class path resource [org/college/controller/CollegeControllerTestContext.groovy] does not exist
+04:29:11.912 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [org.college.controller.CollegeControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+04:29:11.916 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.college.controller.CollegeControllerTest]: CollegeControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+04:29:12.057 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [org.college.controller.CollegeControllerTest]
+04:29:12.147 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+04:29:12.147 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+04:29:12.148 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+04:29:12.166 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [org/college/controller/] to resources [URL [file:/C:/Users/DELL/workspace/classification-web-services/target/test-classes/org/college/controller/], URL [file:/C:/Users/DELL/workspace/classification-web-services/target/classes/org/college/controller/]]
+04:29:12.167 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\Users\DELL\workspace\classification-web-services\target\test-classes\org\college\controller]
+04:29:12.168 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\Users\DELL\workspace\classification-web-services\target\test-classes\org\college\controller] for files matching pattern [C:/Users/DELL/workspace/classification-web-services/target/test-classes/org/college/controller/*.class]
+04:29:12.175 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\Users\DELL\workspace\classification-web-services\target\classes\org\college\controller]
+04:29:12.175 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\Users\DELL\workspace\classification-web-services\target\classes\org\college\controller] for files matching pattern [C:/Users/DELL/workspace/classification-web-services/target/classes/org/college/controller/*.class]
+04:29:12.176 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:org/college/controller/*.class] to resources [file [C:\Users\DELL\workspace\classification-web-services\target\test-classes\org\college\controller\CollegeControllerTest.class], file [C:\Users\DELL\workspace\classification-web-services\target\classes\org\college\controller\CollegeController.class]]
+04:29:12.241 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [org/college/] to resources [URL [file:/C:/Users/DELL/workspace/classification-web-services/target/test-classes/org/college/], URL [file:/C:/Users/DELL/workspace/classification-web-services/target/classes/org/college/]]
+04:29:12.243 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\Users\DELL\workspace\classification-web-services\target\test-classes\org\college]
+04:29:12.244 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\Users\DELL\workspace\classification-web-services\target\test-classes\org\college] for files matching pattern [C:/Users/DELL/workspace/classification-web-services/target/test-classes/org/college/*.class]
+04:29:12.248 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\Users\DELL\workspace\classification-web-services\target\classes\org\college]
+04:29:12.249 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\Users\DELL\workspace\classification-web-services\target\classes\org\college] for files matching pattern [C:/Users/DELL/workspace/classification-web-services/target/classes/org/college/*.class]
+04:29:12.252 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:org/college/*.class] to resources [file [C:\Users\DELL\workspace\classification-web-services\target\classes\org\college\App.class]]
+04:29:12.315 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\DELL\workspace\classification-web-services\target\classes\org\college\App.class]
+04:29:12.316 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.college.App for test class org.college.controller.CollegeControllerTest
+04:29:12.322 [main] DEBUG org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - @TestExecutionListeners is not present for class [org.college.controller.CollegeControllerTest]: using defaults.
+04:29:12.332 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.AutoConfigureReportTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+04:29:12.368 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+04:29:12.385 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+04:29:12.392 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4387b79e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6e75aa0d, org.springframework.boot.test.autoconfigure.AutoConfigureReportTestExecutionListener@7fc229ab, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2cbb3d47, org.springframework.test.context.support.DirtiesContextTestExecutionListener@527e5409, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1198b989, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7ff95560, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@add0edd, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2aa3cd93]
+04:29:12.424 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [org.college.controller.CollegeControllerTest]
+04:29:12.426 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [org.college.controller.CollegeControllerTest]
+04:29:12.434 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class org.college.controller.CollegeControllerTest]
+04:29:12.434 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+04:29:12.437 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+04:29:12.439 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [org.college.controller.CollegeControllerTest] from class [org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper]
+04:29:12.442 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.college.controller.CollegeControllerTest], using SpringBootContextLoader
+04:29:12.445 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.college.controller.CollegeControllerTest]: class path resource [org/college/controller/CollegeControllerTest-context.xml] does not exist
+04:29:12.448 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [org.college.controller.CollegeControllerTest]: class path resource [org/college/controller/CollegeControllerTestContext.groovy] does not exist
+04:29:12.449 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [org.college.controller.CollegeControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+04:29:12.450 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.college.controller.CollegeControllerTest]: CollegeControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+04:29:12.483 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [org.college.controller.CollegeControllerTest]
+04:29:12.486 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+04:29:12.486 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+04:29:12.486 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+04:29:12.487 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.college.App for test class org.college.controller.CollegeControllerTest
+04:29:12.493 [main] DEBUG org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - @TestExecutionListeners is not present for class [org.college.controller.CollegeControllerTest]: using defaults.
+04:29:12.507 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.AutoConfigureReportTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+04:29:12.508 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+04:29:12.511 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+04:29:12.513 [main] INFO org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3901d134, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@14d3bc22, org.springframework.boot.test.autoconfigure.AutoConfigureReportTestExecutionListener@12d4bf7e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4c1d9d4b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7b227d8d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7219ec67, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@45018215, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@65d6b83b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@d706f19]
+04:29:12.516 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [org.college.controller.CollegeControllerTest]
+04:29:12.517 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [org.college.controller.CollegeControllerTest]
+04:29:12.529 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [org.college.controller.CollegeControllerTest]
+04:29:12.529 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [org.college.controller.CollegeControllerTest]
+04:29:12.540 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@61dd025 testClass = CollegeControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@124c278f testClass = CollegeControllerTest, locations = '{}', classes = '{class org.college.App}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.ImportsContextCustomizer@ae7d06a, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3d921e20, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@1c314017, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@27f723, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@185d8b6, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@134e64ce], resourceBasePath = '', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+04:29:12.542 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [org.college.controller.CollegeControllerTest]
+04:29:12.543 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [org.college.controller.CollegeControllerTest]
+04:29:12.547 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@61dd025 testClass = CollegeControllerTest, testInstance = org.college.controller.CollegeControllerTest@309e345f, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@124c278f testClass = CollegeControllerTest, locations = '{}', classes = '{class org.college.App}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.ImportsContextCustomizer@ae7d06a, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3d921e20, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@1c314017, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@27f723, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@185d8b6, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@134e64ce], resourceBasePath = '', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]].
+04:29:12.609 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+04:29:12.609 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+04:29:12.609 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+04:29:12.611 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true, server.port=-1}
+04:29:12.615 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [Inlined Test Properties] PropertySource with highest search precedence
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.4.0.RELEASE)
+
+2018-04-20 04:29:13.794  INFO 7564 --- [           main] o.c.controller.CollegeControllerTest     : Starting CollegeControllerTest on DESKTOP-T4D6LFU with PID 7564 (started by DELL in C:\Users\DELL\workspace\classification-web-services)
+2018-04-20 04:29:13.796  INFO 7564 --- [           main] o.c.controller.CollegeControllerTest     : No active profile set, falling back to default profiles: default
+2018-04-20 04:29:13.937  INFO 7564 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@26abb146: startup date [Fri Apr 20 04:29:13 PDT 2018]; root of context hierarchy
+2018-04-20 04:29:16.987  INFO 7564 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@26abb146: startup date [Fri Apr 20 04:29:13 PDT 2018]; root of context hierarchy
+2018-04-20 04:29:17.224  INFO 7564 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/college/all/applicants],methods=[GET]}" onto public java.util.List<org.college.model.Applicant> org.college.controller.CollegeController.retrieveAllApplicants()
+2018-04-20 04:29:17.227  INFO 7564 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/college/add/applicant],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Void> org.college.controller.CollegeController.registerApplicant(org.college.model.Applicant)
+2018-04-20 04:29:17.232  INFO 7564 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/college/evaluate/{applicantId}],methods=[POST]}" onto public java.lang.String org.college.controller.CollegeController.evaluateApplicant(java.lang.String)
+2018-04-20 04:29:17.250  INFO 7564 --- [           main] o.s.w.s.c.a.WebMvcConfigurerAdapter      : Adding welcome page: ServletContext resource [/index.html]
+2018-04-20 04:29:17.295  INFO 7564 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2018-04-20 04:29:17.334  INFO 7564 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-20 04:29:17.335  INFO 7564 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-20 04:29:17.441  INFO 7564 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-04-20 04:29:17.771  INFO 7564 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring FrameworkServlet ''
+2018-04-20 04:29:17.771  INFO 7564 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization started
+2018-04-20 04:29:17.807  INFO 7564 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : FrameworkServlet '': initialization completed in 35 ms
+2018-04-20 04:29:17.933  INFO 7564 --- [           main] o.c.controller.CollegeControllerTest     : Started CollegeControllerTest in 5.268 seconds (JVM running for 7.281)
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /college/add/applicant
+       Parameters = {}
+          Headers = {Accept=[application/json], Content-Type=[application/json]}
+
+Handler:
+             Type = org.college.controller.CollegeController
+           Method = public org.springframework.http.ResponseEntity<java.lang.Void> org.college.controller.CollegeController.registerApplicant(org.college.model.Applicant)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = {Location=[http://localhost/college/add/applicant/id]}
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = http://localhost/college/add/applicant/id
+          Cookies = []
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -28,7 +29,7 @@ public class CollegeController {
 			return ResponseEntity.noContent().build();
 		
 		Applicant applicant = collegeService.addApplicant(a);
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/id")
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
 						.buildAndExpand(applicant.getId()).toUri();
 		return ResponseEntity.created(location).build();
 		

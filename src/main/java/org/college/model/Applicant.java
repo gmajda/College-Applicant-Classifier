@@ -113,5 +113,19 @@ public class Applicant {
 		this.felonies = felonies;
 	}
 	
+	@Override
+	public String toString() {
+		return "First Name: " + this.firstName + " " +
+				"Last Name: " + this.lastName + " " +
+				"Age: " + this.age + " " +
+				"GPA: " + this.gpa + " " +
+				"SAT: " + this.sat + " " +
+				"ACT: " + this.act + " " +
+				"Felonies " + this.felonies;
+			
+				
+	
+	}
+	
 	
 }
