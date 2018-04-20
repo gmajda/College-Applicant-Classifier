@@ -5,7 +5,9 @@ import static org.junit.Assert.assertEquals;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.college.enums.Message;
 import org.college.model.Applicant;
+import org.college.model.Evaluation;
 import org.college.service.CollegeService;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,10 +40,14 @@ public class CollegeControllerTest {
 	String applicantJson = "{\"firstName\":\"Richard\",\"lastName\":\"Mathiew\",\"age\":19}";
 	
 	List<Applicant> applicants;
+	Applicant applicantToBeEvaluated;
+	Evaluation evaluation;
 	 	
 	@Before
 	public void init(){
 		applicants = new ArrayList<Applicant>();
+		
+		
 		Applicant firstApplicant = new Applicant();
 		firstApplicant.setFirstName("Richard");
 		firstApplicant.setLastName("Mathiew");
@@ -57,7 +63,7 @@ public class CollegeControllerTest {
 	}
 
 	@Test
-	public void registerApplicants() throws Exception{
+	public void RegisterApplicants() throws Exception{
 		Applicant applicant = new Applicant("1", "Albert", "Jose", 18, 4.5, 5, 1921, 0, false );
 		
 		Mockito.when(collegeService.addApplicant(Mockito.any(Applicant.class))).thenReturn(applicant);
@@ -78,7 +84,7 @@ public class CollegeControllerTest {
 	}
 	
 	@Test
-	public void retrieveAllApplicants() throws Exception{
+	public void RetrieveAllApplicants() throws Exception{
 		Mockito.when(collegeService.retrieveAllApplicant()).thenReturn(applicants);
 		
 		RequestBuilder requestBuilder = MockMvcRequestBuilders.get(
@@ -90,5 +96,29 @@ public class CollegeControllerTest {
 		
 		JSONAssert.assertEquals(expected, result.getResponse()
 				.getContentAsString(), false);
+	}
+	
+	@Test
+	public void Evaluate_Instant_Accept_Applicant() throws Exception{
+		evaluation = new Evaluation(Message.INSTANT_ACCEPT, null);
+		applicantToBeEvaluated = new Applicant();
+		applicantToBeEvaluated.setId("1");
+		applicantToBeEvaluated.setFirstName("Mathilde");
+		applicantToBeEvaluated.setLastName("Charlez");
+		applicantToBeEvaluated.setAge(21);
+		applicantToBeEvaluated.setGpa(4.5);
+		applicantToBeEvaluated.setScale(5);
+		applicantToBeEvaluated.setSat(1921);
+		Mockito.when(collegeService.evaluateApplicant(applicantToBeEvaluated)).thenReturn(evaluation);
+		Mockito.when(collegeService.findApplicantById(applicantToBeEvaluated.getId())).thenReturn(applicantToBeEvaluated);
+		RequestBuilder requestBuilder = MockMvcRequestBuilders.post(
+				"/college/evaluate/1");
+		
+		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
+		MockHttpServletResponse response = result.getResponse();
+		
+		assertEquals(HttpStatus.OK.value(), response.getStatus());
+		assertEquals(evaluation.toString(),response
+				.getContentAsString());
 	}
 }

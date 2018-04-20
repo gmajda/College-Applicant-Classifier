@@ -45,7 +45,7 @@ public class CollegeController {
 		Applicant applicant = collegeService.findApplicantById(applicantId);
 		if(applicant == null)
 			return null;
-		
+
 		 Evaluation evaluation = collegeService.evaluateApplicant(applicant);
 		 return evaluation.toString();
 	}
