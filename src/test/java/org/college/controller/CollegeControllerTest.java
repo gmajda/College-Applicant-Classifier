@@ -46,8 +46,7 @@ public class CollegeControllerTest {
 	@Before
 	public void init(){
 		applicants = new ArrayList<Applicant>();
-		
-		
+
 		Applicant firstApplicant = new Applicant();
 		firstApplicant.setFirstName("Richard");
 		firstApplicant.setLastName("Mathiew");
