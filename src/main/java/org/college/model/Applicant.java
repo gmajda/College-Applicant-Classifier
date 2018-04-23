@@ -1,31 +1,33 @@
 package org.college.model;
 
+import com.in28minutes.springboot.model.Course;
+
 public class Applicant {
-	
+
 	private String id;
-	
+
 	private String firstName;
-	
+
 	private String lastName;
-	
+
 	private int age;
-	
+
 	private double gpa;
-	
+
 	private double scale;
-	
+
 	private double sat;
-	
+
 	private double act;
-	
+
 	private boolean felonies;
-	
-	public Applicant(){
-		
+
+	public Applicant() {
+
 	}
 
-	public Applicant(String id,String firstName, String lastName, int age, double gpa, double scale, double sat, double act,
-			boolean felonies) {
+	public Applicant(String id, String firstName, String lastName, int age, double gpa, double scale, double sat,
+			double act, boolean felonies) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -37,8 +39,6 @@ public class Applicant {
 		this.act = act;
 		this.felonies = felonies;
 	}
-
-
 
 	public String getId() {
 		return id;
@@ -79,7 +79,6 @@ public class Applicant {
 	public void setGpa(double gpa) {
 		this.gpa = gpa;
 	}
-	
 
 	public double getScale() {
 		return scale;
@@ -112,20 +111,30 @@ public class Applicant {
 	public void setFelonies(boolean felonies) {
 		this.felonies = felonies;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "First Name: " + this.firstName + " " +
-				"Last Name: " + this.lastName + " " +
-				"Age: " + this.age + " " +
-				"GPA: " + this.gpa + " " +
-				"SAT: " + this.sat + " " +
-				"ACT: " + this.act + " " +
-				"Felonies " + this.felonies;
-			
-				
-	
+		return "First Name: " + this.firstName + " " + "Last Name: " + this.lastName + " " + "Age: " + this.age + " "
+				+ "GPA: " + this.gpa + " " + "SAT: " + this.sat + " " + "ACT: " + this.act + " " + "Felonies "
+				+ this.felonies;
+
 	}
-	
-	
+ 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Applicant applicant = (Applicant) obj;
+		if (id == null) {
+			if (applicant.id != null)
+				return false;
+		} else if (!id.equals(applicant.id))
+			return false;
+		return true;
+	}
+
 }
