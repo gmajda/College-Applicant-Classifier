@@ -119,7 +119,14 @@ public class Applicant {
 				+ this.felonies;
 
 	}
- 
+	@Override
+	public int hashCode() {
+		int hash = 17;
+		hash = 31 * hash + this.firstName.hashCode();
+		hash = 31 * hash + age;
+		hash = 31 * hash + this.lastName.hashCode();
+        return hash;
+	}
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
