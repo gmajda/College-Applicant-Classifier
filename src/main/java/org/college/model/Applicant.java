@@ -1,7 +1,5 @@
 package org.college.model;
 
-import com.in28minutes.springboot.model.Course;
-
 public class Applicant {
 
 	private String id;
