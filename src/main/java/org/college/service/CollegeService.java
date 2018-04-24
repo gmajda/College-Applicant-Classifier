@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.college.enums.Message;
+import org.college.enums.State;
 import org.college.model.Applicant;
 import org.college.model.Evaluation;
 import org.springframework.stereotype.Component;
@@ -32,6 +33,7 @@ public class CollegeService {
 		if(a.isFelonies()){
 			return new Evaluation(Message.INSTANT_REJECT, "Applicant has 1 or more felonies");
 		}
+		if(a.getState().equals(State.CALIFORNIA)){
 		if(a.getAge()>17 && a.getAge()<26){
 			if(a.getGpa()/a.getScale() >= 0.9) {
 				if(a.getSat() > 1920 || a.getAct() > 27){
@@ -46,6 +48,8 @@ public class CollegeService {
 			}
 		}else if (a.getAge()<0){
 			return new Evaluation(Message.INSTANT_REJECT, "Applicant claimed to be a negative age");
+		}}else{
+			return new Evaluation(Message.INSTANT_REJECT, "Applicant should be from CALIFORNIA state");
 		}
 		
 		

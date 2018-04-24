@@ -1,5 +1,7 @@
 package org.college.model;
 
+import org.college.enums.State;
+
 public class Applicant {
 
 	private String id;
@@ -9,6 +11,8 @@ public class Applicant {
 	private String lastName;
 
 	private int age;
+	
+	private State state;
 
 	private double gpa;
 
@@ -24,13 +28,14 @@ public class Applicant {
 
 	}
 
-	public Applicant(String id, String firstName, String lastName, int age, double gpa, double scale, double sat,
+	public Applicant(String id, String firstName, String lastName, int age, State state, double gpa, double scale, double sat,
 			double act, boolean felonies) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
+		this.state = state;
 		this.gpa = gpa;
 		this.scale = scale;
 		this.sat = sat;
@@ -73,6 +78,14 @@ public class Applicant {
 	public double getGpa() {
 		return gpa;
 	}
+	
+	public State getState() {
+		return state;
+	}
+
+	public void setState(State state) {
+		this.state = state;
+	}
 
 	public void setGpa(double gpa) {
 		this.gpa = gpa;
@@ -112,8 +125,8 @@ public class Applicant {
 
 	@Override
 	public String toString() {
-		return "First Name: " + this.firstName + " " + "Last Name: " + this.lastName + " " + "Age: " + this.age + " "
-				+ "GPA: " + this.gpa + " " + "SAT: " + this.sat + " " + "ACT: " + this.act + " " + "Felonies "
+		return "First Name: " + this.firstName + " Last Name: " + this.lastName + " Age: " + this.age + " "
+				+ " State: " + this.state + " GPA: " + this.gpa + " SAT: " + this.sat + " ACT: " + this.act + " Felonies "
 				+ this.felonies;
 
 	}
