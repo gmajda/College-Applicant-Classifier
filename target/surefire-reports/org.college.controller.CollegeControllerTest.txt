@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.college.controller.CollegeControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.557 sec - in org.college.controller.CollegeControllerTest
